@@ -5,7 +5,9 @@ stages
 {
 stage ('git clone')
   {
-git 'https://github.com/afrinpinjari/maven-project.git'
+    steps
+    {git 'https://github.com/afrinpinjari/maven-project.git'
   }
+}
 }
 }
