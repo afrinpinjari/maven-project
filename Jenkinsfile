@@ -10,7 +10,7 @@ pipeline
 				git 'https://github.com/afrinpinjari/maven-project.git'
 			}
 		}
-		stage
+		stage ('compile')
 		{
 			steps
 			{
