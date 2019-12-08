@@ -9,5 +9,13 @@ stage ('git clone')
     {git 'https://github.com/afrinpinjari/maven-project.git'
   }
 }
+  stage
+  {
+    steps
+    {
+    withMaven(jdk: 'localJDK', maven: 'localMaven') {
+    // some block
+    }
+}
 }
 }
