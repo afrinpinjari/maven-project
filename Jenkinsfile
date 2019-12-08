@@ -28,6 +28,15 @@ pipeline
     
 			}
 		}
+		stage ('build my project')
+		{
+			steps
+			{
+				withMaven(jdk: 'localJDK', maven: 'localMaven') {
+				sh 'mvn package'}
+    
+			}
+		}
 		
 	}	
 	}
