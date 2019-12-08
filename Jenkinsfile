@@ -14,8 +14,9 @@ stage ('git clone')
     steps
     {
     withMaven(jdk: 'localJDK', maven: 'localMaven') {
-    // some block
+    sh 'mvn compile'
     }
+}
 }
 }
 }
