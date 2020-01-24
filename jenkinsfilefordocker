@@ -5,4 +5,7 @@ git 'https://github.com/afrinpinjari/maven-project.git'
 stage ('package stage') {
 sh label: '', script: 'mvn clean package'
 }
+stage ('docker image build') {
+sh 'docker build -t afrin01/afrin-app:1.0.0.'
+}
 }
