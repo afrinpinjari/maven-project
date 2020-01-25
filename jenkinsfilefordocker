@@ -7,5 +7,6 @@ sh label: '', script: 'mvn clean package'
 }
 stage ('docker image build') {
 sh 'docker build -t afrin01/prakash-app:1.0.0 .'
+
 }
 }
