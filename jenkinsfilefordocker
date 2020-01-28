@@ -9,4 +9,10 @@ stage ('docker image build') {
 sh 'docker build -t afrin01/prakash-app:1.0.0 .'
 
 }
+stage ('Push Docker image to DockerHub') {
+withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
+sh "docker login -u afrin01 -p ${dockerhub}"
+}
+sh 'docker push afrin01/prakash-app:1.0.0'
+}
 }
